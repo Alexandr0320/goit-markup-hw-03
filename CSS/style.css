@@ -99,6 +99,7 @@ img {
 .navigation {
   display: flex;
   align-items: center;
+  border: 1px solid #ececec;
 }
 
 .navigation-list {
@@ -358,8 +359,10 @@ img {
 
 .buttons-list {
   display: flex;
+  justify-content: center;
 
-  background-color: yellow;
+  padding-top: 100px;
+  padding-bottom: 34px;
 }
 
 .buttons-list .button-item + .button-item {
@@ -383,6 +386,14 @@ img {
 }
 
 /*================menu====================*/
+
+.menu-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.menu-list .menu-item + .menu-item {
+  margin-left: 0px;
 
 .menu-link {
   color: var(--primary-text-color);
