@@ -9,6 +9,9 @@
   --card-set-gap: 30px;
   --card-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  --section-pt: 94px;
+  --section-pb: 94px;
+  --title-padding: 20px;
 }
 
 body {
@@ -77,10 +80,10 @@ img {
   margin-right: auto;
 }
 
-.section {
+/* .section {
   padding-top: 94px;
   padding-bottom: 94px;
-}
+} */
 
 /* ==========HEADER========= */
 
@@ -171,7 +174,7 @@ img {
 
 .hero {
   background-color: var(--primary-text-color);
-  padding: 240px 270px;
+  padding: 200px 0px;
   text-align: center;
 }
 
@@ -197,11 +200,8 @@ img {
   margin: auto;
   font-family: inherit;
   border-radius: 4px;
-  min-width: 200px;
 
-  height: 50px;
-  left: 700px;
-  top: 430px;
+  padding: 10px 32px;
 
   background-color: var(--accent-color);
   color: var(--background-color);
@@ -212,29 +212,29 @@ img {
   line-height: 1.87;
   letter-spacing: 0.06em;
   cursor: pointer;
-
-  text-align: center;
 }
 
 .button:hover,
 .button:focus {
-  color: var(--color-footer);
-  background-color: sienna;
+  color: var(--background-color);
 }
 
 /*=========================section=================================*/
+.advantage {
+  margin-left: calc(-1 * var(--card-set-gap));
+  margin-top: calc(-1 * var(--card-set-gap));
+}
 
 .advantage .advantage-list {
   display: flex;
-  margin-bottom: -94px;
+  padding-top: var(--section-pt);
+  padding-bottom: var(--section-pb);
 }
 
-.advantage-list .advantage-item + .advantage-item {
-  margin-left: 30px;
-}
-
-.advantage-item {
-  width: 270px;
+.advantage-list > .advantage-item {
+  flex-basis: calc(100% / 3 - var(--card-set-gap));
+  margin-left: var(--card-set-gap);
+  margin-top: var(--card-set-gap);
 }
 
 .advantage-title {
@@ -252,12 +252,20 @@ img {
 
 /*=========================occupation==============================*/
 
+.occupation {
+  padding-bottom: var(--section-pb);
+  margin-left: calc(-1 * var(--card-set-gap));
+  margin-top: calc(-1 * var(--card-set-gap));
+}
+
 .occupation .occupation-list {
   display: flex;
 }
 
-.occupation-list .occupation-item + .occupation-item {
-  margin-left: 30px;
+.occupation-list > .occupation-item {
+  flex-basis: calc(100% / 3 - var(--card-set-gap));
+  margin-left: var(--card-set-gap);
+  margin-top: var(--card-set-gap);
 }
 
 .occuation-title {
@@ -267,21 +275,27 @@ img {
   line-height: 1.16;
   text-align: center;
 
-  margin-bottom: 50px;
+  margin-bottom: var(--title-padding);
 }
 
 /*==========================team==============================*/
 
 .team {
   background-color: var(--color-section);
+  padding-top: var(--section-pt);
+  padding-bottom: var(--section-pb);
+  margin-left: calc(-1 * var(--card-set-gap));
+  margin-top: calc(-1 * var(--card-set-gap));
 }
 
 .team-list {
   display: flex;
 }
 
-.team-list .team-item + .team-item {
-  margin-left: 30px;
+.team-list > .team-item {
+  flex-basis: calc(100% / 3 - var(--card-set-gap));
+  margin-left: var(--card-set-gap);
+  margin-top: var(--card-set-gap);
 }
 
 .card {
@@ -296,7 +310,7 @@ img {
   line-height: 1.16;
   text-align: center;
 
-  margin-bottom: 50px;
+  margin-bottom: var(--title-padding);
 }
 
 .team-element {
@@ -347,6 +361,11 @@ img {
   line-height: 1.19;
 }
 
+.footer-link {
+  display: block;
+  margin-bottom: var(--title-padding);
+}
+
 .connection-footer {
   font-size: 14px;
   line-height: 1.71;
@@ -376,8 +395,8 @@ img {
   padding-bottom: 9px;
 }
 
-.address-list {
-  margin-top: 20px;
+.address-item:last-child {
+  padding-bottom: 0px;
 }
 
 /*======================================================PORTFOLIO==================================*/
@@ -396,11 +415,12 @@ img {
 .buttons-list {
   display: flex;
   justify-content: center;
-  padding-bottom: 34px;
+  padding-top: var(--section-pt);
+  margin-bottom: var(--title-padding);
 }
 
-.buttons-list .button-item + .button-item {
-  margin-left: 8px;
+.buttons-list .button-item:not(:last-child) {
+  margin-right: 8px;
 }
 
 .button-choice {
@@ -408,9 +428,10 @@ img {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
-  text-align: center;
   letter-spacing: inherit;
   cursor: pointer;
+
+  padding: 6px 22px;
 
   border: rgba(255, 255, 255, 0.6);
   box-shadow: var(--card-shadow);
@@ -424,24 +445,14 @@ img {
 }
 
 /*================menu====================*/
-
-.menu-list {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.menu-list .menu-item + .menu-item {
-  margin-left: 30px;
-}
-
-.menu-list {
-  padding: 0;
-  margin: 0;
-
-  display: flex;
-  flex-wrap: wrap;
+.menu {
   margin-left: calc(-1 * var(--card-set-gap));
   margin-top: calc(-1 * var(--card-set-gap));
+}
+.menu-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: var(--section-pb);
 }
 
 .menu-list .menu-item {
@@ -461,11 +472,7 @@ img {
 }
 
 .card-content {
-  padding: 20px;
-}
-
-.menu-par {
-  margin-top: 4px;
+  padding: var(--title-padding);
 }
 
 .menu-link:hover {
