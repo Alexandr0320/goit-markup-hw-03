@@ -221,14 +221,15 @@ img {
 
 /*=========================section=================================*/
 .advantage {
-  margin-left: calc(-1 * var(--card-set-gap));
-  margin-top: calc(-1 * var(--card-set-gap));
+  padding-top: var(--section-pt);
+  padding-bottom: var(--section-pb);
 }
 
 .advantage .advantage-list {
   display: flex;
-  padding-top: var(--section-pt);
-  padding-bottom: var(--section-pb);
+
+  margin-left: calc(-1 * var(--card-set-gap));
+  margin-top: calc(-1 * var(--card-set-gap));
 }
 
 .advantage-list > .advantage-item {
@@ -254,12 +255,12 @@ img {
 
 .occupation {
   padding-bottom: var(--section-pb);
-  margin-left: calc(-1 * var(--card-set-gap));
-  margin-top: calc(-1 * var(--card-set-gap));
 }
 
 .occupation .occupation-list {
   display: flex;
+  margin-left: calc(-1 * var(--card-set-gap));
+  margin-top: calc(-1 * var(--card-set-gap));
 }
 
 .occupation-list > .occupation-item {
@@ -275,7 +276,7 @@ img {
   line-height: 1.16;
   text-align: center;
 
-  margin-bottom: var(--title-padding);
+  margin-bottom: 50px;
 }
 
 /*==========================team==============================*/
@@ -284,24 +285,21 @@ img {
   background-color: var(--color-section);
   padding-top: var(--section-pt);
   padding-bottom: var(--section-pb);
-  margin-left: calc(-1 * var(--card-set-gap));
-  margin-top: calc(-1 * var(--card-set-gap));
 }
 
 .team-list {
   display: flex;
+  margin-left: calc(-1 * var(--card-set-gap));
+  margin-top: calc(-1 * var(--card-set-gap));
 }
 
 .team-list > .team-item {
-  flex-basis: calc(100% / 3 - var(--card-set-gap));
+  flex-basis: calc(100% / 4 - var(--card-set-gap));
   margin-left: var(--card-set-gap);
   margin-top: var(--card-set-gap);
-}
 
-.card {
   box-shadow: var(--card-shadow);
   border-radius: 4px;
-  overflow: hidden;
 }
 
 .team-title {
@@ -310,7 +308,7 @@ img {
   line-height: 1.16;
   text-align: center;
 
-  margin-bottom: var(--title-padding);
+  margin-bottom: 50px;
 }
 
 .team-element {
@@ -391,12 +389,10 @@ img {
 .address-item {
   font-size: 14px;
   line-height: 1.71;
-
-  padding-bottom: 9px;
 }
 
-.address-item:last-child {
-  padding-bottom: 0px;
+.address-item:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 /*======================================================PORTFOLIO==================================*/
@@ -412,11 +408,17 @@ img {
     margin: -1px;
   }
 }
+
+.buttons {
+  padding-top: var(--section-pt);
+  padding-bottom: var(--section-pb);
+}
+
 .buttons-list {
   display: flex;
   justify-content: center;
-  padding-top: var(--section-pt);
-  margin-bottom: var(--title-padding);
+
+  margin-bottom: 50px;
 }
 
 .buttons-list .button-item:not(:last-child) {
@@ -445,20 +447,22 @@ img {
 }
 
 /*================menu====================*/
-.menu {
-  margin-left: calc(-1 * var(--card-set-gap));
-  margin-top: calc(-1 * var(--card-set-gap));
-}
+
 .menu-list {
   display: flex;
   flex-wrap: wrap;
-  padding-bottom: var(--section-pb);
+
+  margin-left: calc(-1 * var(--card-set-gap));
+  margin-top: calc(-1 * var(--card-set-gap));
 }
 
 .menu-list .menu-item {
   flex-basis: calc(100% / 3 - var(--card-set-gap));
   margin-left: var(--card-set-gap);
   margin-top: var(--card-set-gap);
+
+  box-shadow: var(--card-shadow);
+  border-radius: 4px;
 }
 
 .menu-link {
