@@ -340,9 +340,6 @@ img {
   line-height: 1.18;
   text-align: center;
 }
-.team-img {
-  box-shadow: var(--card-shadow);
-}
 
 /*================================footer=========================*/
 
